@@ -322,7 +322,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     delete:
       tags:
-      - codes
+      - details
       summary: Eliminar un detalle asociado a un proyecto
       parameters:
         - name: projectId
@@ -444,7 +444,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
 
 # ---- Se definen los ENDPOINTS de una entidad que se relaciona con Blog: Articles ----
 # De acuerdo al modelo proporcionado, un Artículo siempre va a pertenecer a un único Blog, necesariamente 
-  /article:  
+  /articles:  
     get:       
       tags:   
       - articles
@@ -525,7 +525,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     delete:
       tags:
-      - codes
+      - articles
       summary: Eliminar un artículo
       parameters:
         - name: articleId
@@ -600,7 +600,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     delete:
       tags:
-      - codes
+      - users
       summary: Eliminar un usuario determinado
       parameters:
         - name: userId
@@ -714,7 +714,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     delete:
       tags:
-      - codes
+      - tags
       summary: Eliminar una etiqueta
       parameters:
         - name: tagId
@@ -775,7 +775,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
   /phones:
     get:       
       tags:   
-      - phone
+      - phones
       summary: Consultar la lista de teléfonos   
       responses:  
         200:
@@ -805,7 +805,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     post:
       tags:
-      - codes
+      - phones
       summary: Crear un nuevo teléfono asociado a un usuario
       parameters:
         - name: userId
