@@ -12,43 +12,43 @@
   ],
   "tags": [
     {
-      "name": "projects",
+      "name": "project",
       "description": "Maneja la entidad Proyecto"
     },
     {
-      "name": "codes",
+      "name": "code",
       "description": "Maneja la entidad Código"
     },
     {
-      "name": "details",
+      "name": "detail",
       "description": "Maneja la entidad Detalle"
     },
     {
-      "name": "tags",
+      "name": "tag",
       "description": "Maneja la entidad Etiqueta"
     },
     {
-      "name": "users",
+      "name": "user",
       "description": "Maneja la entidad Usuario"
     },
     {
-      "name": "blogs",
+      "name": "blog",
       "description": "Maneja la entidad Blog"
     },
     {
-      "name": "articles",
+      "name": "article",
       "description": "Maneja la entidad Articulo"
     },
     {
-      "name": "phones",
+      "name": "phone",
       "description": "Maneja la entidad Telefono"
     }
   ],
   "paths": {
-    "/projects": {
+    "/project": {
       "get": {
         "tags": [
-          "projects"
+          "project"
         ],
         "summary": "Consultar la lista de proyectos",
         "responses": {
@@ -65,7 +65,7 @@
       },
       "post": {
         "tags": [
-          "projects"
+          "project"
         ],
         "summary": "Crear un nuevo proyecto",
         "requestBody": {
@@ -91,10 +91,10 @@
         }
       }
     },
-    "/projects/{projectId}": {
+    "/project/{projectId}": {
       "get": {
         "tags": [
-          "projects"
+          "project"
         ],
         "summary": "Consultar un proyecto por su ID",
         "parameters": [
@@ -122,7 +122,7 @@
       },
       "put": {
         "tags": [
-          "projects"
+          "project"
         ],
         "summary": "Actualizar un proyecto existente por su ID",
         "parameters": [
@@ -160,7 +160,7 @@
       },
       "delete": {
         "tags": [
-          "projects"
+          "project"
         ],
         "summary": "Eliminar un proyecto por su ID",
         "parameters": [
@@ -187,10 +187,10 @@
         }
       }
     },
-    "/codes": {
+    "/code": {
       "get": {
         "tags": [
-          "codes"
+          "code"
         ],
         "summary": "Consultar la lista de códigos",
         "responses": {
@@ -206,10 +206,10 @@
         }
       }
     },
-    "/codes/{projectId}": {
+    "/code/{projectId}": {
       "get": {
         "tags": [
-          "codes"
+          "code"
         ],
         "summary": "Consultar todos los códigos asociados a un proyecto",
         "parameters": [
@@ -236,7 +236,7 @@
       },
       "post": {
         "tags": [
-          "codes"
+          "code"
         ],
         "summary": "Crear un nuevo código asociado a un proyecto",
         "parameters": [
@@ -272,10 +272,10 @@
         }
       }
     },
-    "/codes/{codeId}": {
+    "/code/{codeId}": {
       "get": {
         "tags": [
-          "codes"
+          "code"
         ],
         "summary": "Consultar un código por su Id",
         "parameters": [
@@ -302,7 +302,7 @@
       },
       "put": {
         "tags": [
-          "codes"
+          "code"
         ],
         "summary": "Actualizar un código por su Id",
         "parameters": [
@@ -339,7 +339,7 @@
       },
       "delete": {
         "tags": [
-          "codes"
+          "code"
         ],
         "summary": "Eliminar un código por su Id",
         "parameters": [
@@ -365,10 +365,10 @@
         }
       }
     },
-    "/details": {
+    "/detail": {
       "get": {
         "tags": [
-          "details"
+          "detail"
         ],
         "summary": "Consultar la lista de detalles",
         "responses": {
@@ -384,10 +384,10 @@
         }
       }
     },
-    "/details/{projectId}": {
+    "/detail/{projectId}": {
       "get": {
         "tags": [
-          "details"
+          "detail"
         ],
         "summary": "Consultar el detalle asociado a un proyecto",
         "parameters": [
@@ -414,7 +414,7 @@
       },
       "post": {
         "tags": [
-          "details"
+          "detail"
         ],
         "summary": "Crear un nuevo detalle asociado a un proyecto",
         "parameters": [
@@ -451,7 +451,7 @@
       },
       "put": {
         "tags": [
-          "details"
+          "detail"
         ],
         "summary": "Actualizar un detalle asociado a un Id de proyecto",
         "parameters": [
@@ -488,7 +488,7 @@
       },
       "delete": {
         "tags": [
-          "details"
+          "detail"
         ],
         "summary": "Eliminar un detalle asociado a un proyecto",
         "parameters": [
@@ -514,10 +514,10 @@
         }
       }
     },
-    "/blogs": {
+    "/blog": {
       "get": {
         "tags": [
-          "blogs"
+          "blog"
         ],
         "summary": "Consultar la lista de blogs registrados",
         "responses": {
@@ -533,10 +533,10 @@
         }
       }
     },
-    "/blogs/{userId}": {
+    "/blog/{userId}": {
       "post": {
         "tags": [
-          "blogs"
+          "blog"
         ],
         "summary": "Crear un nuevo blog",
         "parameters": [
@@ -573,10 +573,10 @@
         }
       }
     },
-    "/blogs/{blogId}": {
+    "/blog/{blogId}": {
       "get": {
         "tags": [
-          "blogs"
+          "blog"
         ],
         "summary": "Consultar un blog por su ID",
         "parameters": [
@@ -604,7 +604,7 @@
       },
       "put": {
         "tags": [
-          "blogs"
+          "blog"
         ],
         "summary": "Actualizar un blog existente por su ID",
         "parameters": [
@@ -642,7 +642,7 @@
       },
       "delete": {
         "tags": [
-          "blogs"
+          "blog"
         ],
         "summary": "Eliminar un blog por su ID",
         "parameters": [
@@ -669,10 +669,10 @@
         }
       }
     },
-    "/articles": {
+    "/article": {
       "get": {
         "tags": [
-          "articles"
+          "article"
         ],
         "summary": "Consultar la lista de artículos",
         "responses": {
@@ -688,10 +688,10 @@
         }
       }
     },
-    "/articles/{blogId}": {
+    "/article/{blogId}": {
       "get": {
         "tags": [
-          "articles"
+          "article"
         ],
         "summary": "Consultar los artículos asociados a un proyecto",
         "parameters": [
@@ -718,7 +718,7 @@
       },
       "post": {
         "tags": [
-          "articles"
+          "article"
         ],
         "summary": "Crear un nuevo artículo asociado a un blog",
         "parameters": [
@@ -754,10 +754,10 @@
         }
       }
     },
-    "/articles/{articleId}": {
+    "/article/{articleId}": {
       "put": {
         "tags": [
-          "articles"
+          "article"
         ],
         "summary": "Actualizar un artículo",
         "parameters": [
@@ -794,7 +794,7 @@
       },
       "delete": {
         "tags": [
-          "articles"
+          "article"
         ],
         "summary": "Eliminar un artículo",
         "parameters": [
@@ -820,10 +820,10 @@
         }
       }
     },
-    "/users": {
+    "/user": {
       "get": {
         "tags": [
-          "users"
+          "user"
         ],
         "summary": "Consultar la lista de usuarios",
         "responses": {
@@ -840,7 +840,7 @@
       },
       "post": {
         "tags": [
-          "users"
+          "user"
         ],
         "summary": "Crear un nuevo usuario",
         "requestBody": {
@@ -866,10 +866,10 @@
         }
       }
     },
-    "/users/{userId}": {
+    "/user/{userId}": {
       "put": {
         "tags": [
-          "users"
+          "user"
         ],
         "summary": "Actualizar un usuario determinado",
         "parameters": [
@@ -906,7 +906,7 @@
       },
       "delete": {
         "tags": [
-          "users"
+          "user"
         ],
         "summary": "Eliminar un usuario determinado",
         "parameters": [
@@ -932,10 +932,10 @@
         }
       }
     },
-    "/users/{projectId}": {
+    "/user/{projectId}": {
       "get": {
         "tags": [
-          "users"
+          "user"
         ],
         "summary": "Consultar los usuarios asociado a un proyecto",
         "parameters": [
@@ -961,10 +961,10 @@
         }
       }
     },
-    "/users/{blogId}": {
+    "/user/{blogId}": {
       "get": {
         "tags": [
-          "users"
+          "user"
         ],
         "summary": "Consultar el usuario asociado a un blog",
         "parameters": [
@@ -990,10 +990,10 @@
         }
       }
     },
-    "/tags": {
+    "/tag": {
       "get": {
         "tags": [
-          "tags"
+          "tag"
         ],
         "summary": "Consultar la lista de etiquetas",
         "responses": {
@@ -1010,7 +1010,7 @@
       },
       "post": {
         "tags": [
-          "tags"
+          "tag"
         ],
         "summary": "Crear una nueva etiqueta",
         "requestBody": {
@@ -1036,10 +1036,10 @@
         }
       }
     },
-    "/tags/{tagId}": {
+    "/tag/{tagId}": {
       "put": {
         "tags": [
-          "tags"
+          "tag"
         ],
         "summary": "Actualizar una etiqueta determinada",
         "parameters": [
@@ -1076,7 +1076,7 @@
       },
       "delete": {
         "tags": [
-          "tags"
+          "tag"
         ],
         "summary": "Eliminar una etiqueta",
         "parameters": [
@@ -1102,10 +1102,10 @@
         }
       }
     },
-    "/tags/{projectId}": {
+    "/tag/{projectId}": {
       "get": {
         "tags": [
-          "tags"
+          "tag"
         ],
         "summary": "Consultar las etiquetas asociadas a un proyecto",
         "parameters": [
@@ -1131,10 +1131,10 @@
         }
       }
     },
-    "/tags/{articleId}": {
+    "/tag/{articleId}": {
       "get": {
         "tags": [
-          "tags"
+          "tag"
         ],
         "summary": "Consultar las etiquetas asociadas a un artículo",
         "parameters": [
@@ -1160,10 +1160,10 @@
         }
       }
     },
-    "/phones": {
+    "/phone": {
       "get": {
         "tags": [
-          "phones"
+          "phone"
         ],
         "summary": "Consultar la lista de teléfonos",
         "responses": {
@@ -1179,10 +1179,10 @@
         }
       }
     },
-    "/phones/{userId}": {
+    "/phone/{userId}": {
       "get": {
         "tags": [
-          "phones"
+          "phone"
         ],
         "summary": "Consultar el teléfono asociado a un usuario",
         "parameters": [
@@ -1209,7 +1209,7 @@
       },
       "post": {
         "tags": [
-          "phones"
+          "phone"
         ],
         "summary": "Crear un nuevo teléfono asociado a un usuario",
         "parameters": [
@@ -1246,7 +1246,7 @@
       },
       "put": {
         "tags": [
-          "phones"
+          "phone"
         ],
         "summary": "Actualizar un teléfono asociado a un usuario",
         "parameters": [
@@ -1283,7 +1283,7 @@
       },
       "delete": {
         "tags": [
-          "phones"
+          "phone"
         ],
         "summary": "Eliminar un teléfono asociado a un usuario",
         "parameters": [

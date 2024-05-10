@@ -7,31 +7,31 @@ servers:
   - url: https://api.a926022/v1/  #URL base de la API (inventada)
 
 tags:   #Etiquetas para organizar las entidades
-  - name: projects
+  - name: project
     description: Maneja la entidad Proyecto
-  - name: codes
+  - name: code
     description: Maneja la entidad Código
-  - name: details
+  - name: detail
     description: Maneja la entidad Detalle  
-  - name: tags
+  - name: tag
     description: Maneja la entidad Etiqueta
-  - name: users
+  - name: user
     description: Maneja la entidad Usuario
-  - name: blogs
+  - name: blog
     description: Maneja la entidad Blog
-  - name: articles
+  - name: article
     description: Maneja la entidad Articulo
-  - name: phones
+  - name: phone
     description: Maneja la entidad Telefono
     
     
     
 paths:        #Especifica los Endoints, las rutas a los recursos
 
-  /projects:  #Endpoint para definir las acciones sobre la entidad general de Proyectos
+  /project:  #Endpoint para definir las acciones sobre la entidad general de Proyectos
     get:      #Definición de la acción 
       tags:   #Se asocia a la etiqueta correspondinete
-      - projects
+      - project
       summary: Consultar la lista de proyectos   #Descripción corta de la acción
       responses:  #Respuestas que el servidor devuelve a la petición
         200:
@@ -43,7 +43,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     post:     
       tags:
-      - projects
+      - project
       summary: Crear un nuevo proyecto
       requestBody:      #Especifica el cuerpo que debe tener la solicitud HTTP
         required: true  #Indica que el cuerpo se exige obligatoriamente en la petición
@@ -60,10 +60,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
        
-  /projects/{projectId}: #Endpoint para definir las acciones sobre un Proyecto en concreto, identificado por su Id
+  /project/{projectId}: #Endpoint para definir las acciones sobre un Proyecto en concreto, identificado por su Id
     get:
       tags:
-      - projects
+      - project
       summary: Consultar un proyecto por su ID
       parameters:
         - name: projectId
@@ -81,7 +81,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     put:
       tags:
-      - projects
+      - project
       summary: Actualizar un proyecto existente por su ID
       parameters:
         - name: projectId
@@ -105,7 +105,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     delete:
       tags:
-      - projects
+      - project
       summary: Eliminar un proyecto por su ID
       parameters:
         - name: projectId
@@ -126,10 +126,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
 
 # ---- Se definen los ENDPOINTS de una entidad que se relaciona de Proyectos: Códigos ----
 # De acuerdo al modelo proporcionado, un Código siempre va a pertenecer a un único Proyecto, necesariamente 
-  /codes:  
+  /code:  
     get:       
       tags:   
-      - codes
+      - code
       summary: Consultar la lista de códigos   
       responses:  
         200:
@@ -139,10 +139,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
     
-  /codes/{projectId}:  
+  /code/{projectId}:  
     get:
       tags:
-      - codes
+      - code
       summary: Consultar todos los códigos asociados a un proyecto
       parameters:
         - name: projectId
@@ -159,7 +159,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     post:
       tags:
-      - codes
+      - code
       summary: Crear un nuevo código asociado a un proyecto
       parameters:
         - name: projectId
@@ -181,10 +181,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
           
-  /codes/{codeId}:
+  /code/{codeId}:
     get:
       tags:
-      - codes
+      - code
       summary: Consultar un código por su Id
       parameters:
         - name: codeId
@@ -201,7 +201,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     put:
       tags:
-      - codes
+      - code
       summary: Actualizar un código por su Id
       parameters:
         - name: codeId
@@ -224,7 +224,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     delete:
       tags:
-      - codes
+      - code
       summary: Eliminar un código por su Id
       parameters:
         - name: codeId
@@ -243,10 +243,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
 
 # ---- Se definen los ENDPOINTS de una entidad que se relaciona de Proyectos: Detalles ----
 # De acuerdo al modelo proporcionado, un Detalle siempre va a pertenecer a un único Proyecto, necesariamente 
-  /details:  
+  /detail:  
     get:       
       tags:   
-      - details
+      - detail
       summary: Consultar la lista de detalles   
       responses:  
         200:
@@ -256,10 +256,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
     
-  /details/{projectId}:  
+  /detail/{projectId}:  
     get:
       tags:
-      - details
+      - detail
       summary: Consultar el detalle asociado a un proyecto
       parameters:
         - name: projectId
@@ -276,7 +276,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     post:
       tags:
-      - details
+      - detail
       summary: Crear un nuevo detalle asociado a un proyecto
       parameters:
         - name: projectId
@@ -299,7 +299,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     put:
       tags:
-      - details
+      - detail
       summary: Actualizar un detalle asociado a un Id de proyecto
       parameters:
         - name: projectId
@@ -322,7 +322,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     delete:
       tags:
-      - details
+      - detail
       summary: Eliminar un detalle asociado a un proyecto
       parameters:
         - name: projectId
@@ -339,10 +339,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
 
 
-  /blogs:  
+  /blog:  
     get:     
       tags:   
-      - blogs
+      - blog
       summary: Consultar la lista de blogs registrados  
       responses:  
         200:
@@ -352,10 +352,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
     
-  /blogs/{userId}:   #Un blog debe estar asociado, necesariamente, a un usuario
+  /blog/{userId}:   #Un blog debe estar asociado, necesariamente, a un usuario
     post:     
       tags:
-      - blogs
+      - blog
       summary: Crear un nuevo blog
       parameters:
         - name: userId
@@ -378,10 +378,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
        
-  /blogs/{blogId}: 
+  /blog/{blogId}: 
     get:
       tags:
-      - blogs
+      - blog
       summary: Consultar un blog por su ID
       parameters:
         - name: blogId
@@ -399,7 +399,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     put:
       tags:
-      - blogs
+      - blog
       summary: Actualizar un blog existente por su ID
       parameters:
         - name: blogId
@@ -423,7 +423,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     delete:
       tags:
-      - blogs
+      - blog
       summary: Eliminar un blog por su ID
       parameters:
         - name: blogId
@@ -444,10 +444,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
 
 # ---- Se definen los ENDPOINTS de una entidad que se relaciona con Blog: Articles ----
 # De acuerdo al modelo proporcionado, un Artículo siempre va a pertenecer a un único Blog, necesariamente 
-  /articles:  
+  /article:  
     get:       
       tags:   
-      - articles
+      - article
       summary: Consultar la lista de artículos   
       responses:  
         200:
@@ -457,10 +457,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
     
-  /articles/{blogId}:  
+  /article/{blogId}:  
     get:
       tags:
-      - articles
+      - article
       summary: Consultar los artículos asociados a un proyecto
       parameters:
         - name: blogId
@@ -477,7 +477,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     post:
       tags:
-      - articles
+      - article
       summary: Crear un nuevo artículo asociado a un blog
       parameters:
         - name: blogId
@@ -499,10 +499,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
   
-  /articles/{articleId}:
+  /article/{articleId}:
     put:
       tags:
-      - articles
+      - article
       summary: Actualizar un artículo 
       parameters:
         - name: articleId
@@ -525,7 +525,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     delete:
       tags:
-      - articles
+      - article
       summary: Eliminar un artículo
       parameters:
         - name: articleId
@@ -544,10 +544,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
 
 
 # ---- Se definen los ENDPOINTS de una entidad que se relaciona tanto con Proyectos como con Blogs: Usuarios ----
-  /users:  
+  /user:  
     get:       
       tags:   
-      - users
+      - user
       summary: Consultar la lista de usuarios   
       responses:  
         200:
@@ -558,7 +558,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     post:
       tags:
-      - users
+      - user
       summary: Crear un nuevo usuario
       requestBody:
         required: true
@@ -574,10 +574,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
     
-  /users/{userId}:
+  /user/{userId}:
     put:
       tags:
-      - users
+      - user
       summary: Actualizar un usuario determinado
       parameters:
         - name: userId
@@ -600,7 +600,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     delete:
       tags:
-      - users
+      - user
       summary: Eliminar un usuario determinado
       parameters:
         - name: userId
@@ -617,10 +617,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
    
   
-  /users/{projectId}:  
+  /user/{projectId}:  
     get:
       tags:
-      - users
+      - user
       summary: Consultar los usuarios asociado a un proyecto
       parameters:
         - name: projectId
@@ -636,10 +636,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
     
-  /users/{blogId}:  
+  /user/{blogId}:  
     get:
       tags:
-      - users
+      - user
       summary: Consultar el usuario asociado a un blog
       parameters:
         - name: blogId
@@ -658,10 +658,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
  
  
  # ---- Se definen los ENDPOINTS de una entidad que se relaciona tanto con Proyectos como con Artículos: Etiquetas ----
-  /tags:  
+  /tag:  
     get:       
       tags:   
-      - tags
+      - tag
       summary: Consultar la lista de etiquetas   
       responses:  
         200:
@@ -672,7 +672,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     post:
       tags:
-      - tags
+      - tag
       summary: Crear una nueva etiqueta
       requestBody:
         required: true
@@ -688,10 +688,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
     
-  /tags/{tagId}:
+  /tag/{tagId}:
     put:
       tags:
-      - tags
+      - tag
       summary: Actualizar una etiqueta determinada
       parameters:
         - name: tagId
@@ -714,7 +714,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     delete:
       tags:
-      - tags
+      - tag
       summary: Eliminar una etiqueta
       parameters:
         - name: tagId
@@ -730,10 +730,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
    
-  /tags/{projectId}:  
+  /tag/{projectId}:  
     get:
       tags:
-      - tags
+      - tag
       summary: Consultar las etiquetas asociadas a un proyecto
       parameters:
         - name: projectId
@@ -749,10 +749,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
     
-  /tags/{articleId}:  
+  /tag/{articleId}:  
     get:
       tags:
-      - tags
+      - tag
       summary: Consultar las etiquetas asociadas a un artículo
       parameters:
         - name: articleId
@@ -772,10 +772,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
 
 # ---- Se definen los ENDPOINTS de una entidad que se relaciona con Usuarios: Teléfono ----
 # Según el modelo proporcionado un usuario tiene un único teléfono y un teléfono pertenece a un único usuario
-  /phones:
+  /phone:
     get:       
       tags:   
-      - phones
+      - phone
       summary: Consultar la lista de teléfonos   
       responses:  
         200:
@@ -785,10 +785,10 @@ paths:        #Especifica los Endoints, las rutas a los recursos
         500:
           $ref: '#/components/responses/errorServidor'
     
-  /phones/{userId}:  
+  /phone/{userId}:  
     get:
       tags:
-      - phones
+      - phone
       summary: Consultar el teléfono asociado a un usuario
       parameters:
         - name: userId
@@ -805,7 +805,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     post:
       tags:
-      - phones
+      - phone
       summary: Crear un nuevo teléfono asociado a un usuario
       parameters:
         - name: userId
@@ -828,7 +828,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     put:
       tags:
-      - phones
+      - phone
       summary: Actualizar un teléfono asociado a un usuario
       parameters:
         - name: userId
@@ -851,7 +851,7 @@ paths:        #Especifica los Endoints, las rutas a los recursos
           $ref: '#/components/responses/errorServidor'
     delete:
       tags:
-      - phones
+      - phone
       summary: Eliminar un teléfono asociado a un usuario
       parameters:
         - name: userId
