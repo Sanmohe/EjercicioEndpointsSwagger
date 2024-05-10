@@ -488,7 +488,7 @@
       },
       "delete": {
         "tags": [
-          "codes"
+          "details"
         ],
         "summary": "Eliminar un detalle asociado a un proyecto",
         "parameters": [
@@ -669,7 +669,7 @@
         }
       }
     },
-    "/article": {
+    "/articles": {
       "get": {
         "tags": [
           "articles"
@@ -794,7 +794,7 @@
       },
       "delete": {
         "tags": [
-          "codes"
+          "articles"
         ],
         "summary": "Eliminar un artículo",
         "parameters": [
@@ -906,7 +906,7 @@
       },
       "delete": {
         "tags": [
-          "codes"
+          "users"
         ],
         "summary": "Eliminar un usuario determinado",
         "parameters": [
@@ -1076,7 +1076,7 @@
       },
       "delete": {
         "tags": [
-          "codes"
+          "tags"
         ],
         "summary": "Eliminar una etiqueta",
         "parameters": [
@@ -1163,7 +1163,7 @@
     "/phones": {
       "get": {
         "tags": [
-          "phone"
+          "phones"
         ],
         "summary": "Consultar la lista de teléfonos",
         "responses": {
@@ -1209,7 +1209,7 @@
       },
       "post": {
         "tags": [
-          "codes"
+          "phones"
         ],
         "summary": "Crear un nuevo teléfono asociado a un usuario",
         "parameters": [
